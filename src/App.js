@@ -9,7 +9,7 @@ const App = () => {
       .then(function (dataUrl) {
         console.log(dataUrl);
         const pdf = new jsPDF();
-        pdf.addImage(dataUrl, 'PNG', 10, 20, 300, 200);
+        pdf.addImage(dataUrl, 'PNG', 10, 20, 380, 200);
         pdf.save("download.pdf");
       })
       .catch(function (error) {
@@ -18,7 +18,7 @@ const App = () => {
   };
   return (
     <div className="App" >
-      <img id="my-node" src="https://pspdfkit.com/images/blog/2018/render-pdfs-in-the-browser-with-pdf-js/article-header-08575afc.png"></img>
+      <img id="my-node" src="https://pspdfkit.com/images/blog/2018/render-pdfs-in-the-browser-with-pdf-js/article-header-08575afc.png"></img><br></br>
       <button onClick={onButtonClick}>Download PDF</button>
     </div>
   );
